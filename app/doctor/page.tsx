@@ -17,7 +17,7 @@ const DoctorsPage = () => {
 
   useEffect(() => {
     const fetchDoctors = async () => {
-      const res = await fetch("http://localhost:5000/api/doctor/list-doctors?page=1&limit=10");
+      const res = await fetch("https://apollo-assignment-backend.onrender.com/api/doctor/list-doctors?page=1&limit=10");
       const data = await res.json();
       setDoctors(data.data || []);
       console.log(data.data);
